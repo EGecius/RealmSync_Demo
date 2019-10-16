@@ -15,6 +15,7 @@ import android.view.View
 import android.widget.EditText
 import io.realm.SyncUser
 import io.realm.log.RealmLog
+import io.realm.todo.ProfileActivity
 import io.realm.todo.R
 import io.realm.todo.WelcomeActivity
 import java.util.*
@@ -95,8 +96,15 @@ class TransactionsActivity : AppCompatActivity() {
         if (item.itemId == R.id.action_logout) {
             logout()
             return true
+        } else if (item.itemId == R.id.action_profile) {
+            openProfile()
         }
+
         return super.onOptionsItemSelected(item)
+    }
+
+    private fun openProfile() {
+        ProfileActivity.openFrom(this)
     }
 
     private fun logout() {

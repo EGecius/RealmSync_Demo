@@ -1,6 +1,8 @@
 package io.realm.todo
 
 import android.annotation.SuppressLint
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import io.realm.todo.transactions.realmResultsProfile
@@ -23,6 +25,13 @@ class ProfileActivity : AppCompatActivity() {
                 email.text = profile.email
                 tradingName.text = profile.tradingName
             }
+        }
+    }
+
+    companion object {
+        fun openFrom(originActivity: Activity) {
+            val intent = Intent(originActivity, ProfileActivity::class.java)
+            originActivity.startActivity(intent)
         }
     }
 }
