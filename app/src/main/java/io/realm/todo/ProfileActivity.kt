@@ -22,9 +22,9 @@ class ProfileActivity : AppCompatActivity() {
         realmResultsProfile.addChangeListener { results ->
             if (results.isNotEmpty()) {
                 val profile = results[0]!!
-                name.text = "${profile.firstName} ${profile.surname}"
-                email.text = profile.email
-                tradingName.text = profile.tradingName
+                name.setText("${profile.firstName} ${profile.surname}")
+                email.setText(profile.email)
+                tradingName.setText(profile.tradingName)
             }
         }
     }

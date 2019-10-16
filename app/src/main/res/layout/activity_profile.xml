@@ -29,17 +29,17 @@
         android:paddingEnd="16dp"
         android:paddingBottom="16dp">
 
-        <TextView
+        <EditText
             android:id="@+id/name"
             style="@style/ProfileItem"
             tools:text="Name Surname" />
 
-        <TextView
+        <EditText
             android:id="@+id/email"
             style="@style/ProfileItem"
             tools:text="name@me.io" />
 
-        <TextView
+        <EditText
             android:id="@+id/tradingName"
             style="@style/ProfileItem"
             tools:text="Trading name" />
