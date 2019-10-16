@@ -12,9 +12,10 @@ import io.realm.todo.transactions.Profile
 import io.realm.todo.transactions.realm
 import io.realm.todo.transactions.realmResultsProfile
 import kotlinx.android.synthetic.main.activity_profile.*
-import java.util.*
 
 class ProfileActivity : AppCompatActivity() {
+
+    lateinit var profile: Profile
 
     private val firstNameTextChangeListener = object : SimpleTextWatcher() {
         override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
@@ -49,7 +50,7 @@ class ProfileActivity : AppCompatActivity() {
         realmResultsProfile.addChangeListener { results ->
             if (results.isNotEmpty()) {
                 removeTextChangeListeners()
-                val profile = results[0]!!
+                profile = results[0]!!
                 first_name.setText(profile.firstName)
                 surname.setText(profile.surname)
                 email.setText(profile.email)
@@ -76,14 +77,13 @@ class ProfileActivity : AppCompatActivity() {
     @SuppressLint("LongLogTag")
     private fun updateProfileOnRealm() {
         realm.executeTransactionAsync({ realm ->
-            // TODO: 2019-10-16 use the same id
-            val id = UUID.randomUUID().toString()
+            val id = profile.contactId
             val firstName = getText(first_name)
             val surname = getText(surname)
             val email = getText(email)
             val tradingName = getText(tradingName)
             val profile = Profile(id, firstName, surname, email, tradingName)
-            realm.insert(profile)
+            realm.insertOrUpdate(profile)
         }, { error ->
             Log.e("Eg:TransactionsActivity:72", "onCreate error:$error")
             RealmLog.error(error)
