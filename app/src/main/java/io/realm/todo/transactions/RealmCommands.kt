@@ -6,7 +6,7 @@ import io.realm.log.RealmLog
 import java.util.*
 
 @SuppressLint("LongLogTag")
-fun setProfile() {
+fun setDefaultProfile() {
     realm.executeTransactionAsync({ realm ->
         val id = UUID.randomUUID().toString()
         val firstName = "Jag"
