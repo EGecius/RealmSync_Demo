@@ -17,7 +17,6 @@ import io.realm.SyncUser
 import io.realm.log.RealmLog
 import io.realm.todo.R
 import io.realm.todo.WelcomeActivity
-import kotlinx.android.synthetic.main.activity_transactions.*
 import java.util.*
 
 @SuppressLint("LongLogTag")
@@ -28,21 +27,8 @@ class TransactionsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_transactions)
         setSupportActionBar(findViewById(R.id.toolbar))
         setupFab()
-        showProfile()
         showTransactions()
         printChangesInRealm()
-    }
-
-    @SuppressLint("SetTextI18n")
-    private fun showProfile() {
-        realmResultsProfile.addChangeListener { results ->
-            if (results.isNotEmpty()) {
-                val profile = results[0]!!
-                name.text = "${profile.firstName} ${profile.surname}"
-                email.text = profile.email
-                tradingName.text = profile.tradingName
-            }
-        }
     }
 
     private fun setupFab() {

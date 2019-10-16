@@ -18,31 +18,6 @@
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:paddingBottom="16dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/name"
-                style="@style/ProfileItem"
-                tools:text="Name Surname" />
-
-            <TextView
-                android:id="@+id/email"
-                style="@style/ProfileItem"
-                tools:text="name@me.io" />
-
-            <TextView
-                android:id="@+id/tradingName"
-                style="@style/ProfileItem"
-                tools:text="Trading name" />
-
-        </LinearLayout>
-
     </android.support.design.widget.AppBarLayout>
 
 
