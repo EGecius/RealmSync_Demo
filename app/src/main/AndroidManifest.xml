@@ -30,6 +30,11 @@
             android:label="@string/transactions"
             android:theme="@style/AppTheme.NoActionBar" />
 
+        <activity
+            android:name=".ProfileActivity"
+            android:label="@string/profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+
     </application>
 
 </manifest>

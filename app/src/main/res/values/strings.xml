@@ -22,5 +22,6 @@
     <string name="login">Login</string>
     <string name="amount">Amount in £</string>
     <string name="transactions">Transactions</string>
+    <string name="profile">Profile</string>
 
 </resources>
