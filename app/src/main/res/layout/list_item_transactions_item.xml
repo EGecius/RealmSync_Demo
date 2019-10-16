@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/transaction_item_container"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/time"
+        style="@style/TransactionsListItemTime"
+        tools:text="12:02" />
+
+    <ImageView
+        android:id="@+id/card_scheme_img"
+        style="@style/TransactionsListItemCardImg"
+        android:layout_toEndOf="@+id/time"
+        tools:src="@drawable/ic_visa" />
+
+    <TextView
+        android:id="@+id/card_type"
+        style="@style/TransactionsListItemCardType"
+        android:layout_toEndOf="@+id/card_scheme_img"
+        tools:text="Debit" />
+
+    <TextView
+        android:id="@+id/masked_card_number"
+        style="@style/TransactionsListItemCardNo"
+        android:layout_toEndOf="@+id/card_type"
+        tools:text="***1234" />
+
+    <TextView
+        android:id="@+id/transaction_amount"
+        style="@style/TransactionsListItemAmount"
+        android:layout_toEndOf="@+id/masked_card_number"
+        tools:text="£2.50" />
+
+    <View
+        android:id="@+id/divider"
+        style="@style/TransactionsListItemDivider" />
+
+</RelativeLayout>

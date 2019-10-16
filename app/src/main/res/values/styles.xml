@@ -1,0 +1,82 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <!-- Transaction list item -->
+
+    <style name="TransactionsListItemTime" parent="PsBody2">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+    </style>
+
+    <style name="TransactionsListItemCardImg">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">12dp</item>
+    </style>
+
+    <style name="TransactionsListItemCardType">
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_width">64dp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TransactionsListItemCardNo" parent="PsBody2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:gravity">end</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">12dp</item>
+    </style>
+
+    <style name="TransactionsListItemAmount" parent="PsBody2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:gravity">end</item>
+        <item name="android:textColor">@color/black_active_opacity_87</item>
+    </style>
+
+    <style name="TransactionsListItemDivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:background">@color/divider_dark</item>
+    </style>
+
+
+    <style name="PsBody2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="android:textColor">@color/black_inactive_opacity_54</item>
+    </style>
+
+    <style name="ProfileItem">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+</resources>
