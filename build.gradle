@@ -10,7 +10,7 @@ buildscript {
     // the project always compile with the latest version of Realm Java
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath 'com.android.tools.build:gradle:3.5.1'
         classpath "io.realm:realm-gradle-plugin:+"
     }
 }
