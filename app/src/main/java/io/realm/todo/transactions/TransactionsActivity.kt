@@ -17,7 +17,7 @@ import io.realm.SyncUser
 import io.realm.log.RealmLog
 import io.realm.todo.R
 import io.realm.todo.WelcomeActivity
-import kotlinx.android.synthetic.main.activity_items.*
+import kotlinx.android.synthetic.main.activity_transactions.*
 import java.util.*
 
 @SuppressLint("LongLogTag")
@@ -25,7 +25,7 @@ class TransactionsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_items)
+        setContentView(R.layout.activity_transactions)
         setSupportActionBar(findViewById(R.id.toolbar))
         setupFab()
         showProfile()
