@@ -18,7 +18,21 @@ class ProfileActivity : AppCompatActivity() {
 
     private val firstNameTextChangeListener = object : SimpleTextWatcher() {
         override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-            super.onTextChanged(s, start, before, count)
+            updateProfileOnRealm()
+        }
+    }
+    private val surnameTextChangeListener = object : SimpleTextWatcher() {
+        override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+            updateProfileOnRealm()
+        }
+    }
+    private val emailTextChangeListener = object : SimpleTextWatcher() {
+        override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+            updateProfileOnRealm()
+        }
+    }
+    private val tradingNameTextChangeListener = object : SimpleTextWatcher() {
+        override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
             updateProfileOnRealm()
         }
     }
@@ -47,10 +61,16 @@ class ProfileActivity : AppCompatActivity() {
 
     private fun removeTextChangeListeners() {
         first_name.removeTextChangedListener(firstNameTextChangeListener)
+        surname.removeTextChangedListener(surnameTextChangeListener)
+        email.removeTextChangedListener(emailTextChangeListener)
+        tradingName.removeTextChangedListener(tradingNameTextChangeListener)
     }
 
     private fun setTextChangeListeners() {
         first_name.addTextChangedListener(firstNameTextChangeListener)
+        surname.addTextChangedListener(surnameTextChangeListener)
+        email.addTextChangedListener(emailTextChangeListener)
+        tradingName.addTextChangedListener(tradingNameTextChangeListener)
     }
 
     @SuppressLint("LongLogTag")
