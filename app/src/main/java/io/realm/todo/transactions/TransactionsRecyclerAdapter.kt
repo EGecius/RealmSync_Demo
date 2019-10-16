@@ -9,7 +9,7 @@ import android.widget.TextView
 import io.realm.OrderedRealmCollection
 import io.realm.RealmRecyclerViewAdapter
 import io.realm.todo.R
-import kotlinx.android.synthetic.main.list_item_transactions_item.view.*
+import kotlinx.android.synthetic.main.list_item_transaction.view.*
 
 internal class TransactionsRecyclerAdapter(data: OrderedRealmCollection<Transaction>) : RealmRecyclerViewAdapter<Transaction, TransactionsRecyclerAdapter.MyViewHolder>(data, true) {
 
@@ -17,7 +17,7 @@ internal class TransactionsRecyclerAdapter(data: OrderedRealmCollection<Transact
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val itemView = LayoutInflater.from(parent.context)
-                .inflate(R.layout.list_item_transactions_item, parent, false)
+                .inflate(R.layout.list_item_transaction, parent, false)
         return MyViewHolder(itemView)
     }
 
