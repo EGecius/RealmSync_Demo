@@ -32,12 +32,12 @@
         <EditText
             android:id="@+id/first_name"
             style="@style/ProfileItem"
-            tools:text="Name Surname" />
+            tools:text="First Name" />
 
         <EditText
             android:id="@+id/surname"
             style="@style/ProfileItem"
-            tools:text="Name Surname" />
+            tools:text="Surname" />
 
         <EditText
             android:id="@+id/email"
